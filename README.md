@@ -1,72 +1,155 @@
-# Getting Started with Create React App
+# ThriveSync Web Application
+![showcase](https://user-images.githubusercontent.com/93707378/235323737-291c3fe4-f3d9-4a0e-b6c1-5e8f5310743b.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technologies
+<div style="display:flex; margin: auto;">
 
-## Available Scripts
+  <img style="margin:5px;" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React">
+  <img style="margin:5px;" src="https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white" alt="npm">
+  <img style="margin:5px;" src="https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white" alt="React">
+  <img style="margin:5px;" src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="React">
+  <img style="margin:5px;" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="Intellij">
+  <img style="margin:5px;" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="Intellij">
+  <img style="margin:5px;" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="Intellij">
+  <img style="margin:5px;" src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Intellij">
+  <img style="margin:5px;" src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
+  <img style="margin:5px;" src="https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white">
+  <img style="margin:5px;" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VSCode">
+  <img style="margin:5px;" src="https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green">
+  <img style="margin:5px;" src="https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white" alt="Markdown">
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+# Overview
+ThriveSync is an genetic alorithms based state-of-the-art tool to calculate burn out rates for employees 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 1. Web Application
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+TherapAIst is a cutting-edge web application built with **React.js**, designed to visualize real-time video and voice analytics data of patients in clinics. The application visualize different levels of analytical such as emotions, sentiment, suicidal tendencies, and depression levels in patients. The web site presents these analytics in an easy-to-understand format, providing valuable insights for doctors and therapists.
 
-### `npm test`
+Web application consists of following parts:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Landing Page**:
+The first page of the web site is a visually appealing and futuristic landing page that captures the attention of users. It provides an overview of the application's features and functionality, encouraging users to explore further.
 
-### `npm run build`
+- **Registration and Login Pages**:
+The registration and login pages are user-friendly and straightforward. Doctors can easily create a new account or log in to their existing accounts with their email and password. This helps to ensure that only authorized personnel can access the patient data and analytics.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Doctor Profile**:
+The doctor profile page displays statistics and experience of the doctor, providing a comprehensive view of their expertise and qualifications. It enables doctors to manage their patient data, track progress, and view analytics.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Patient Analysis Dashboard**:
+The patient analysis dashboard provides detailed insights into the patient's emotional state, sentiment, suicidal tendencies, and depression levels. It is easy to navigate, allowing doctors to quickly access and view the data they need.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Overall, TherapAIst is an innovative web application that leverages advanced technology to provide valuable insights into patients' emotional state and mental health. It enables doctors and therapists to make informed decisions and provide the best possible care for their patients.
 
-### `npm run eject`
+## Web Application Demo
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[![](https://markdown-videos.deta.dev/youtube/USL-rW7b9cQ)](https://youtu.be/USL-rW7b9cQ)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Front-end
-React front end web application of group 4, CM4601 - Computational Intelligence
+## Repository Structure
+```
++---therapaist
+    +---public
+    |       favicon.ico
+    |       index.html
+    |       logo192.png
+    |       logo3.png
+    |       logo512.png
+    |       manifest.json
+    |       robots.txt
+    |       
+    \---src
+        |   App.js
+        |   DisableRightClick.jsx
+        |   index.css
+        |   index.js
+        |   
+        +---api
+        |       loginapi.js
+        |       registerapi.js
+        |       
+        +---assets
+        |       bars.png
+        |       bg2.jpg
+        |       bg2_cover.png
+        |       bgdoctor.jpg
+        |       bgdoctor_1.png
+        |       cover1.png
+        |       doctor1.png
+        |       doc_uk.jpeg
+        |       dr_uk_new.jpg
+        |       herobg.mp4
+        |       login.png
+        |       logo.png
+        |       logo2.png
+        |       logo3.png
+        |       next_session.png
+        |       patient1.png
+        |       patient2.png
+        |       patient3.png
+        |       patient_cover.webp
+        |       patient_cover_1.png
+        |       patient_list.png
+        |       patient_profile_photo_uk.jpg
+        |       quotes.png
+        |       register 1.png
+        |       register.png
+        |       register_1.png
+        |       ukp_avt.jpg
+        |       uk_avatar.jpg
+        |       up_session1.png
+        |       
+        +---components
+        |   +---cards
+        |   |       Cards.css
+        |   |       Cards.js
+        |   |       
+        |   +---Contacts
+        |   |       ContactList.css
+        |   |       ContactList.jsx
+        |   |       Contacts.css
+        |   |       Contacts.jsx
+        |   |       
+        |   +---HomeCards
+        |   |       BlobCard.css
+        |   |       BlobCard.js
+        |   |       
+        |   +---navbar
+        |   |       Navbar.css
+        |   |       Navbar.js
+        |   |       
+        |   \---Progress
+        |           Progress.js
+        |           
+            +---data
+            |       dashboard_table.js
+            |       patientData.js
+        |       
+        \---pages
+            +---Dashboard
+            |       Dashboard.css
+            |       Dashboard.jsx
+            |       
+            +---Home
+            |       Home.css
+            |       Home.js
+            |       Landing.css
+            |       Landing.js
+            |       
+            +---login
+            |       login.css
+            |       Login.js
+            |       
+            +---profile
+            |       Profile.css
+            |       Profile.js
+            |       
+            \---register
+                    Register.css
+                    Register.js
+    |   .gitignore
+    |   package-lock.json
+    |   package.json
+    |   README.md
+    ```
