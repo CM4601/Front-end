@@ -43,7 +43,7 @@ const AddEmployee = () => {
         <form onSubmit={handleClick}>
           <div className='form-group'>
             <label htmlFor='wfh'>WFH Setup Available</label>
-            <select name='wfh' onChange={handleChange}>
+            <select name='wfh' id='wfh' onChange={handleChange}>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>

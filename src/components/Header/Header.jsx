@@ -20,7 +20,7 @@ const Header = () => {
               className={(navClass) => 
                 navClass.isActive ? "active__link" : ""
               }
-            >Generate a Team</NavLink>
+            >Find Optimal Team</NavLink>
           </li>
           <li className='nav_item'>
             <NavLink
