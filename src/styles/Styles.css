@@ -9,6 +9,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    backdrop-filter: blur(50px);
 }
 
 .hero_container .form_container{
@@ -223,6 +224,7 @@ form button .btn_ctn{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    backdrop-filter: blur(50px);
 }
 
 .team_table_container{

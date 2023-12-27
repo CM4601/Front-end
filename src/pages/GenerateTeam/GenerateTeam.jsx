@@ -69,6 +69,7 @@ const GenerateTeam = () => {
       };
 
     } catch (error) {
+      setLoading(false);
       alert(`Error: ${error.message}`);
       console.error('Error:', error);
     };
