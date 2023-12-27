@@ -1,5 +1,6 @@
 # ThriveSync Web Application
-![showcase](https://user-images.githubusercontent.com/93707378/235323737-291c3fe4-f3d9-4a0e-b6c1-5e8f5310743b.png)
+![poster](https://github.com/CM4601/thrive-sync-frontend/assets/93707378/45f34e9a-b81f-4542-b05f-c1efeddbb7bb)
+
 
 ## Technologies
 <div style="display:flex; margin: auto;">
