@@ -1,0 +1,214 @@
+/* Common css */
+.hero_container{
+    width: 100vw;
+    height: 89vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(50deg, #8f4cc233 0%, #8f4cc233 100%),url('../assests/hero_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero_container .form_container{
+    width: 30vw;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 29px 0px;
+}
+
+.hero_container .form_container .form__title{
+    width: 100%;
+    height: 100px;
+    border-radius: 8px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(50deg, #ddb5fc23 0%, #ddb5fc23 100%),url('../assests/title__block.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero_container .form_container .form__title h3{
+    font-size: 30px;
+    margin-left: 20px;
+    line-height: 0.5%;
+    color: #fff;
+    font-weight: 600;
+}
+
+.hero_container .form_container .form__title p{
+    font-size: 12px;
+    margin-left: 20px;
+    line-height: 0.5%;
+    color: #dfb7fd;
+    font-weight: 600;
+}
+
+.hero_container .form_container form{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 70%;
+}
+
+form .form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+form .form-group input,
+form .form-group select{
+    border:  none;
+    border-bottom: 1px solid #707070;
+    max-width: 100%;
+    color: #525252;
+    padding: 0.5rem;
+    font-size: 12px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+form .form-group label{
+    margin-bottom: 0.1rem;
+    font-size: 11px;
+    font-weight: 400;
+    color: #585858;
+}
+
+form button{
+    border: none;
+    max-width: 100%;
+    background-color: #8F00FF;
+    color: #fff;
+    border-radius: 0.3rem;
+}
+
+form button .btn_ctn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    gap: 5px;
+}
+
+.loader{
+    border: 2px solid #fff;
+    border-radius: 50%;
+    border-top: 2px solid #33005a;
+    width: 14px;
+    height: 14px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg);}
+}
+
+
+/* Display Burn out css */
+.hero_container .output_container{
+    width: 20vw;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 29px 0px;
+}
+
+.hero_container .output_container img{
+    width: 100px;
+}
+
+.hero_container .output_container h3{
+    font-size: 35px;
+    font-weight: 900;
+    color: #525252;
+    margin-top: 20px;
+}
+
+/* table css */
+.team_container{
+    width: 100vw;
+    height: 89vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(50deg, #8f4cc233 0%, #8f4cc233 100%),url('../assests/hero_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.team_table_container{
+    width: 50vw;
+    padding: 25px;
+    height: 76vh;
+    border-radius: 15px;
+    overflow-y: auto;
+    margin: 15px 0px 0px 0px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 29px 0px;
+}
+
+.team_table_container::-webkit-scrollbar{
+    width: 0.2em;
+}
+
+.team_table_container::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+.team_table_container::-webkit-scrollbar-thumb{
+    background-color: #525252;
+    border-radius: 1em;
+}
+
+.team_table_container::-webkit-scrollbar-thumb:hover{
+    background-color: #8F00FF;
+}
+
+.team_table_container .team_table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.team_table_container .team_table th{
+    height: 20px;
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #8F00FF;
+}
+
+.team_table_container .team_table td{
+    vertical-align: middle;
+    padding: 10px 5px 10px 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.team_table_container .team_table th{
+    border-bottom: 2px dashed #ddd;
+}
+
+.team_table_container .team_table td{
+    border-bottom: 1px solid #ddd;
+}
+
