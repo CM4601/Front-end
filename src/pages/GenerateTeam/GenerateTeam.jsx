@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
 import "../../styles/Styles.css";
 
 import { RiAiGenerate } from "react-icons/ri";
@@ -11,25 +13,13 @@ const GenerateTeam = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const [fileName, setFileName] = useState("Please select a file");
+  const [fileU, setFileU] = useState(null);
 
-  const [formData, setFormData] = useState({
+  const [formDataI, setFormData] = useState({
     designation: "0",
     generations: "10",
-    file: null,
+    csv_file: null,
   });
-
-  const handleClick = async (e) => {
-    e.preventDefault();
-
-    setLoading(true);
-
-    console.log(formData);
-
-    setTimeout(() => {
-      setLoading(false); 
-      navigate("/genteam");
-  }, 3000);
-  };
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -41,13 +31,47 @@ const GenerateTeam = () => {
 
     if (selectedFile) {
       setFormData({
-        ...formData,
-        file: selectedFile,
+        ...formDataI,
+        csv_file: selectedFile,
       });
+
+      setFileU(selectedFile);
 
       setFileName(selectedFile.name);
       console.log(selectedFile);
     }
+  };
+
+  console.log(formDataI);
+
+  const handleClick = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try{
+      const formData = new FormData();
+
+      formData.append('csv_file', fileU);
+
+      formData.append('Designation', formDataI.designation);
+
+      formData.append('Number of generations', formDataI.generations);
+
+      const response = await axios.post('http://localhost:5000/api/generateTeam', formData);
+
+      console.log('Response Status Code:', response.status);
+      console.log('Response JSON:', response.data);
+
+      if (response.status == 200){
+        setLoading(false);
+
+        navigate('/genteam', { state: { responseData: response.data } });
+      };
+
+    } catch (error) {
+      alert(`Error: ${error.message}`);
+      console.error('Error:', error);
+    };
   };
 
   return (
@@ -55,12 +79,12 @@ const GenerateTeam = () => {
       <div className='form_container'>
         <div className='form__title'>
           <h3>Find Optimal Team</h3>
-          <p>use our state-of-the-art technology to get optimal team with lowers Burn out rates</p>
+          <p>use our state-of-the-art technology to get optimal team with lowest Burn out rates</p>
         </div>
 
         <form onSubmit={handleClick}>
           <div className='form-group'>
-            <label htmlFor='designation'>Designations</label>
+            <label htmlFor='designation'>Designation</label>
             <select name='designation' onChange={handleChange}>
               <option value="0">Seniority level 1</option>
               <option value="1">Seniority level 2</option>
@@ -98,7 +122,7 @@ const GenerateTeam = () => {
               onChange={handleFileChange}
             />
 
-            {formData.file ? 
+            {formDataI.csv_file ? 
               (
                 <div className='uploader-text'>
                   <div className='uploader-left'>

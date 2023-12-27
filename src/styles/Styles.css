@@ -204,11 +204,19 @@ form button .btn_ctn{
     margin-top: 20px;
 }
 
+.hero_container .output_container .title_bro{
+    font-size: 40px;
+    font-weight: 900;
+    color: #8F00FF;
+    margin-top: 20px;
+}
+
 /* table css */
 .team_container{
     width: 100vw;
     height: 89vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(50deg, #8f4cc233 0%, #8f4cc233 100%),url('../assests/hero_bg.png');
@@ -220,12 +228,61 @@ form button .btn_ctn{
 .team_table_container{
     width: 50vw;
     padding: 25px;
-    height: 76vh;
+    height: 50vh;
     border-radius: 15px;
     overflow-y: auto;
     margin: 15px 0px 0px 0px;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kpi-container{
+    width: 40vw;
+    padding: 25px;
+    height: 15vh;
+    border-radius: 15px;
+    margin: 15px 0px 0px 0px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-kpis{
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.team-kpis .kpi{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8eeff;
+    border-radius: 10px;
+}
+
+.team-kpis .kpi .line{
+    width: 80%;
+    border-bottom: 1px solid #8F00FF;
+}
+
+.team-kpis .kpi p{
+    font-size: 12px;
+    color: #8F00FF;
+}
+
+.team-kpis .kpi h3{
+    font-size: 25px;
+    color: #525252;
 }
 
 .team_table_container::-webkit-scrollbar{

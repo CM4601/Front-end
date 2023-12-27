@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
 import "../../styles/Styles.css";
 
 import { HiOutlineCalculator } from "react-icons/hi2";
 
 const AddEmployee = () => {
   const [formData, setFormData] = useState({
-    wfh: 'Yes',
-    designation: undefined,
-    mfs: undefined,
-    resourceal: undefined,
+    "WFH Setup Available": 'Yes',
+    "Designation": undefined,
+    "Mental Fatigue Score": undefined,
+    "Resource Allocation": undefined,
   });
   const [loading, setLoading] = useState(false);
 
@@ -21,15 +23,29 @@ const AddEmployee = () => {
 
   const handleClick = async (e) => {
     e.preventDefault();
-
     setLoading(true);
 
-    console.log(formData);
+    const jsonPayload = JSON.stringify(formData);
 
-    setTimeout(() => {
-      setLoading(false); 
-      navigate("/burnout")
-  }, 3000);
+    const headers = {
+      'Content-Type': 'application/json',
+    };
+
+    try {
+      const response = await axios.post('http://localhost:5000/api/predictBurnOut', jsonPayload, { headers });
+
+      console.log('Response Status Code:', response.status);
+      console.log('Response JSON:', JSON.stringify(response.data, null, 2));
+
+      if (response.status == 200){
+        setLoading(false);
+
+        navigate('/burnout', { state: { responseData: response.data } });
+      };
+       
+    } catch (error) {
+      console.error('Error:', error.message);
+    };
   };
 
   return (
@@ -42,23 +58,23 @@ const AddEmployee = () => {
 
         <form onSubmit={handleClick}>
           <div className='form-group'>
-            <label htmlFor='wfh'>WFH Setup Available</label>
-            <select name='wfh' id='wfh' onChange={handleChange}>
+            <label htmlFor='WFH Setup Available'>WFH Setup Available</label>
+            <select name='WFH Setup Available' id='WFH Setup Available' onChange={handleChange}>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </div>
           <div className='form-group'>
-            <label htmlFor='designation'>Designation</label>
-            <input type='number' name='designation' id='designation' onChange={handleChange}/>
+            <label htmlFor='Designation'>Designation</label>
+            <input type='number' name='Designation' id='Designation' min={0} max={5} onChange={handleChange}/>
           </div>
           <div className='form-group'>
-            <label htmlFor='mfs'>Mental Fatigue Score</label>
-            <input type='text' name='mfs' id='mfs' onChange={handleChange}/>
+            <label htmlFor='Mental Fatigue Score'>Mental Fatigue Score</label>
+            <input type='text' name='Mental Fatigue Score' id='Mental Fatigue Score' onChange={handleChange}/>
           </div>
           <div className='form-group'>
-            <label htmlFor='resourceal'>Resource Allocation</label>
-            <input type='number' name='resourceal' id='resourceal' onChange={handleChange}/>
+            <label htmlFor='Resource Allocation'>Resource Allocation</label>
+            <input type='number' name='Resource Allocation' id='Resource Allocation' onChange={handleChange}/>
           </div>
           <button type='submit' className='form__btn'>
             {loading ? (
